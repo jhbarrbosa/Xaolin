@@ -16,36 +16,27 @@ public class XaolinDoido extends AdvancedRobot
 
 		while (true)
 		{
-		
-			setAhead(80);
-			setTurnRight(90);
-			turnGunLeft(180);
-			setAhead(50);
-			setTurnRight(180);
-			turnGunLeft(360);
-
-			for (int voltasDir=0;voltasDir<4;voltasDir++)
-			{
-				ahead(100);
-				turnRight(90);
-				turnGunRight(90);
-			}
+			setAhead(10);
+			turnGunRight(20);
 		}
+		
 	}
 
 		//Robo inimigo detectado
 	public void onScannedRobot(ScannedRobotEvent e)
 	{
 		double distancia = e.getDistance();
-		if (distancia < 150)
+		if (distancia < 190)
 		{
-			fire(3);
+			fire(4);
 		}
 		else
 		{
 			fire(1);
 		}
+		scan();
 	}
+	
 	//colisao com a parede
 	public void onHitWall(HitWallEvent e)
 		{
