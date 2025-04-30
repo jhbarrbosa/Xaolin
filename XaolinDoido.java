@@ -16,7 +16,7 @@ public class XaolinDoido extends AdvancedRobot
 
 		while (true)
 		{
-			setAhead(10);
+			setAhead(15);
 			turnGunRight(20);
 		}
 		
@@ -26,21 +26,28 @@ public class XaolinDoido extends AdvancedRobot
 	public void onScannedRobot(ScannedRobotEvent e)
 	{
 		double distancia = e.getDistance();
-		if (distancia < 190)
+		if (distancia < 120)		
 		{
+			setBack(50);
+			setTurnRight(20);
 			fire(4);
+			scan();
 		}
 		else
 		{
 			fire(1);
 		}
-		scan();
+		
 	}
 	
 	//colisao com a parede
 	public void onHitWall(HitWallEvent e)
 		{
-		back(90);
-		turnRight(90);
+		setBack(50);
+		setTurnRight(50);
+		ahead(100);
+		setTurnRight(45);
+		ahead(100);
+		setTurnLeft(45);
 		}
 }
