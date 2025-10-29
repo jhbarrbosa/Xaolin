@@ -1,3 +1,4 @@
+package juniorHenrique;
 package emanuelSilva;
 import robocode.*;
 import java.awt.Color;
@@ -35,6 +36,7 @@ public class XaolinDoido extends AdvancedRobot
 		}
 		else
 		{
+			laser(3);
 			fire (2);
 			fire(1);
 		}
@@ -44,7 +46,9 @@ public class XaolinDoido extends AdvancedRobot
 	//colisao com a parede
 	public void onHitWall(HitWallEvent e)
 		{
+		setBack(360);
 		setBack(50);
+		setTurnRight(190);	
 		setTurnRight(50);
 		ahead(100);
 		setTurnRight(45);
@@ -52,4 +56,5 @@ public class XaolinDoido extends AdvancedRobot
 		setTurnLeft(45);
 		}
 }
+
 
