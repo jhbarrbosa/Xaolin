@@ -35,6 +35,7 @@ public class XaolinDoido extends AdvancedRobot
 		}
 		else
 		{
+			fire (2);
 			fire(1);
 		}
 		
@@ -51,3 +52,4 @@ public class XaolinDoido extends AdvancedRobot
 		setTurnLeft(45);
 		}
 }
+
